@@ -1487,8 +1487,10 @@ footer {
       '%0APeople: ' + encodeURIComponent(people) +
       '%0ADate: ' + encodeURIComponent(date) +
       '%0ARequirements: ' + encodeURIComponent(req);
-    window.location.href = 'https://wa.me/917559296995?text=' + msg;
-  }
+var link = document.createElement('a');
+link.href = 'https://wa.me/917559296995?text=' + msg;
+link.target = '_blank';
+link.click();  }
 
   // Submit
   function submitBooking() {
